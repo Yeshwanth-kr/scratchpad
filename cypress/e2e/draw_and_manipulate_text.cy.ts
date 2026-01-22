@@ -48,7 +48,7 @@ describe("Interactive Canvas Text Operations", () => {
         clientY: canvasHeight / 2,
       })
       .trigger("mouseup");
-    cy.get(".textArea").clear().type("Miraya is here!").blur();
+    cy.get(".textArea").clear().type("Yeshwanth is here!").blur();
     cy.wait(500);
 
     cy.findByRole("button", { name: "Undo last action" })

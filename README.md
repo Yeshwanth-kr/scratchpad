@@ -1,4 +1,4 @@
-# 🥷🏽 NinjaSketch
+# 🥷🏽 ScratchPad
 
 An Excalidraw clone with React and TypeScript. Rough.js is used for the sketchy, hand-drawn style. I built the side project for learning purposes. The app is not responsive. I mainly focused on the functionalities since I already have plenty of projects that are responsive.
 
@@ -15,7 +15,7 @@ An Excalidraw clone with React and TypeScript. Rough.js is used for the sketchy,
 
 ## 🦄 Features
 
-Here's what you can do with NinjaSketch:
+Here's what you can do with ScratchPad:
 
 - **Choose a Tool**: You have pencils, lines, rectangles, and text tools. Pick one and start creating.
 
@@ -111,4 +111,4 @@ To run the project in your local environment, follow these steps:
 
 ## 🍿 Video
 
-https://github.com/mirayatech/NinjaSketch/assets/71933266/6a16c9e5-6380-4317-96e7-d132768f7b40
+https://github.com/mirayatech/ninjasketch/assets/71933266/6a16c9e5-6380-4317-96e7-d132768f7b40
