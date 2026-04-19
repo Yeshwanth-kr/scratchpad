@@ -6,14 +6,26 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+
       - name: Install & Lint
         run: |
           npm ci
           npm run lint
+
       - name: Security Audit
-        run: npm audit --audit-level=high # Fails the build if high-risk vulnerabilities exist
-      - name: Lighthouse CI # Performance as Code
+        run: npm audit --audit-level=high
+
+      - name: Deploy to Vercel
+        uses: amondnet/vercel-action@v20
+        with:
+          vercel-token: ${{ secrets.VERCEL_TOKEN }}
+          vercel-org-id: ${{ secrets.VERCEL_ORG_ID }}
+          vercel-project-id: ${{ secrets.VERCEL_PROJECT_ID }}
+          vercel-args: '--prod'
+          working-directory: ./
+
+      - name: Lighthouse CI
         uses: treosh/lighthouse-ci-action@v12
         with:
           urls: 'https://scratchpad.yeshwanth.online'
-          uploadArtifacts: true # This will save the report so you can see it
+          uploadArtifacts: true
