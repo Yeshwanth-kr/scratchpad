@@ -20,7 +20,7 @@
     "minimatch": "^9.0.5",
     "perfect-freehand": "^1.2.0",
     "react": "^18.2.0",
-    "react-dom": "^18.2.0",
+    "react-dom": "^19.2.5",
     "react-icons": "^4.12.0",
     "roughjs": "^4.6.6",
     "tippy.js": "^6.3.7"
@@ -29,7 +29,7 @@
     "@testing-library/cypress": "^10.0.1",
     "@tippyjs/react": "4.2.6",
     "@types/react": "^18.2.43",
-    "@types/react-dom": "^18.2.17",
+    "@types/react-dom": "^19.2.3",
     "@typescript-eslint/eslint-plugin": "^6.14.0",
     "@typescript-eslint/parser": "^6.14.0",
     "@vitejs/plugin-react": "^4.2.1",
