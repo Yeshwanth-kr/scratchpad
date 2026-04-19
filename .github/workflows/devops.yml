@@ -17,8 +17,9 @@ jobs:
 
       - name: Install & Test
         run: |
-          npm install
+          npm ci
           npm run lint # Shows you care about code quality
+          npm run build
           
       - name: Build Docker Image
         run: docker build -t scratchpad:latest .
