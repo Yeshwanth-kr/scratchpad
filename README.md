@@ -4,14 +4,36 @@ An Excalidraw clone with React and TypeScript. Rough.js is used for the sketchy,
 
 ## 📦 Technologies
 
-- `Vite`
-- `React.js`
-- `TypeScript`
-- `Rough.js`
-- `CSS`
-- `Vitest`
-- `Cypress` 
-- `Testing Library`
+### Frontend & Logic
+- **Framework:** `React.js` (TypeScript)
+- **Build Tool:** `Vite`
+- **Graphics:** `Rough.js` (Canvas API)
+- **Styling:** `CSS`
+
+### DevOps & Infrastructure (The "Engine")
+- **CI/CD:** `GitHub Actions`
+- **Containerization:** `Docker` & `Docker-Compose`
+- **Cloud Hosting:** `Vercel` (Edge Network)
+- **Security:** `Dependabot` & `npm audit` overrides
+
+### Quality Assurance
+- **Unit/Component Testing:** `Vitest` & `Testing Library`
+- **E2E Testing:** `Cypress`
+- **Performance:** `Lighthouse CI`
+
+## 🚀 DevOps & Automation
+
+This project serves as a showcase for Modern DevSecOps practices. Beyond the frontend logic, I engineered a robust CI/CD infrastructure to ensure high availability, security, and performance.
+
+- **CI/CD Orchestration**: Managed via GitHub Actions with parallelized workflows for testing and deployment.
+  
+- **DevSecOps**: Implemented an automated Security Audit gate. Resolved high-severity ReDoS vulnerabilities in transitive dependencies using npm overrides to maintain a zero-vulnerability posture.
+
+- **Infrastructure as Code**: Containerized the application using Docker, providing environment parity between development and production.
+
+- **Performance Budgets**: Integrated Lighthouse CI to enforce frontend performance standards (LCP, TBT) on every deployment.
+
+- **Automated Dependency Management**: Configured Dependabot to proactively manage and patch the software supply chain.
 
 ## 🦄 Features
 
@@ -52,6 +74,12 @@ Finally, I added testing with Cypress and Testing Library. I conducted end-to-en
 Along the way, while building everything, I took notes on what I've learned so I don't miss out on it. I also documented the behind-the-scenes processes every time a feature was added.
 
 This way, I understood what I've built. The funny thing is, as soon as I started to document what happened behind the scenes and the features I've added, it made me realize that we fully understand something once we've actually taken a step back, thought about it, and documented what we've done. I think this is a good practice to follow when learning something new.
+
+While the core focus was drawing logic, I treated the Deployment Lifecycle as a first-class feature. I shifted security 'Left' by integrating automated audits directly into the pull request flow. I also decoupled the build and deployment phases, allowing for specialized quality gates that ensure only verified, high-performance artifacts reach the production environment on Vercel.
+
+## 📈 Quality & Performance
+
+Every deployment is audited for Core Web Vitals. You can view the latest Lighthouse Report in the GitHub Actions artifacts, ensuring the application remains fast and accessible despite complex canvas rendering logic.
 
 ## 📚 What I Learned
 
@@ -104,10 +132,18 @@ Each part of this project helped me understand more about building apps, managin
 
 To run the project in your local environment, follow these steps:
 
+**Standard Setup**:
 1. Clone the repository to your local machine.
 2. Run `npm install` or `yarn` in the project directory to install the required dependencies.
 3. Run `npm run start` or `yarn start` to get the project started.
 4. Open [http://localhost:5173](http://localhost:5173) (or the address shown in your console) in your web browser to view the app.
+
+**Docker Setup (Best Practice)**:
+1. Run the command and build the Docker image.
+```bash
+docker-compose up --build
+```
+2. The app will be available at [http://localhost:5173](http://localhost:5173)
 
 ## 🍿 Video
 
