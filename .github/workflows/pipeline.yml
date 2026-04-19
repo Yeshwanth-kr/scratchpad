@@ -13,6 +13,7 @@ jobs:
       - name: Security Audit
         run: npm audit --audit-level=high # Fails the build if high-risk vulnerabilities exist
       - name: Lighthouse CI # Performance as Code
-        uses: treosh/lighthouse-config-action@v11
+        uses: treosh/lighthouse-ci-action@v12
         with:
           urls: 'https://scratchpad.yeshwanth.online' # Use your actual Vercel URL
+          uploadArtifacts: true # This will save the report so you can see it
