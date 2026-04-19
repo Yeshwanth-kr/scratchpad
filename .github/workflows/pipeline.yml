@@ -23,6 +23,7 @@ jobs:
           vercel-project-id: ${{ secrets.VERCEL_PROJECT_ID }}
           vercel-args: '--prod'
           working-directory: ./
+          vercel-version: 47.2.2
 
       - name: Lighthouse CI
         uses: treosh/lighthouse-ci-action@v12
