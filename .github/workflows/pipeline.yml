@@ -9,7 +9,7 @@ jobs:
 
       - name: Install & Lint
         run: |
-          npm ci
+          npm install --legacy-peer-deps
           npm run lint
 
       - name: Security Audit

@@ -17,7 +17,7 @@ jobs:
 
       - name: Install & Test
         run: |
-          npm ci
+          npm install --legacy-peer-deps
           npm run lint # Shows you care about code quality
           
       - name: Build Docker Image
