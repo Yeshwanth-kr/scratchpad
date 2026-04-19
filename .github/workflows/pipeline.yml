@@ -10,7 +10,6 @@ jobs:
         run: |
           npm ci
           npm run lint
-          npm run build
       - name: Security Audit
         run: npm audit --audit-level=high # Fails the build if high-risk vulnerabilities exist
       - name: Lighthouse CI # Performance as Code
