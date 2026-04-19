@@ -13,7 +13,6 @@ RUN npm run build
 # Stage 2: Production Stage
 FROM nginx:stable-alpine
 # Copy the compiled build from the first stage
-# Note: Ensure your build output folder is 'dist' or 'build'
 COPY --from=build /app/dist /usr/share/nginx/html
 
 # Expose port 80

@@ -15,5 +15,5 @@ jobs:
       - name: Lighthouse CI # Performance as Code
         uses: treosh/lighthouse-ci-action@v12
         with:
-          urls: 'https://scratchpad.yeshwanth.online' # Use your actual Vercel URL
+          urls: 'https://scratchpad.yeshwanth.online'
           uploadArtifacts: true # This will save the report so you can see it
