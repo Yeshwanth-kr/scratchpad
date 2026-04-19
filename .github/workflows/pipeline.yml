@@ -1,0 +1,18 @@
+name: Production Quality Gate
+on: [push]
+
+jobs:
+  quality-check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Install & Lint
+        run: |
+          npm install
+          npm run lint
+      - name: Security Audit
+        run: npm audit --audit-level=high # Fails the build if high-risk vulnerabilities exist
+      - name: Lighthouse CI # Performance as Code
+        uses: treosh/lighthouse-config-action@v11
+        with:
+          urls: 'https://scratchpad.yeshwanth.online' # Use your actual Vercel URL

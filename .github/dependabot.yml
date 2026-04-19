@@ -1,0 +1,25 @@
+version: 2
+updates:
+  # 1. Automate updates for npm dependencies
+  - package-ecosystem: "npm"
+    directory: "/" # Location of package.json
+    schedule:
+      interval: "weekly" # Options: daily, weekly, monthly
+    open-pull-requests-limit: 5
+    # Automatically assign yourself to the PRs
+    assignees:
+      - "Yeshwanth-kr" 
+
+  # 2. Automate updates for your GitHub Actions
+  - package-ecosystem: "github-actions"
+    directory: "/"
+    schedule:
+      interval: "weekly"
+    assignees:
+      - "Yeshwanth-kr"
+
+  # 3. Automate updates for Docker (Since you added a Dockerfile)
+  - package-ecosystem: "docker"
+    directory: "/"
+    schedule:
+      interval: "weekly"
