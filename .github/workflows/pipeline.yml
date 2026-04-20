@@ -34,6 +34,7 @@ jobs:
           vercel-version: latest
 
       - name: Lighthouse CI
-        run: |
-          npm install -g @lhci/cli@0.13.x
-          lhci autoreview --upload
+        uses: treosh/lighthouse-ci-action@v12
+        with:
+          urls: 'https://scratchpad.yeshwanth.online'
+          uploadArtifacts: true
