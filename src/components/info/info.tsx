@@ -22,9 +22,9 @@ export function Info() {
         onClose={() => setOpen(false)}
         aria-labelledby="customized-dialog-title"
         open={open}
-        PaperProps={{
-          style: {
-            borderRadius: "10px",
+        slotProps={{
+          paper: {
+            sx: {borderRadius: "10px"},
           },
         }}
       >
