@@ -5,7 +5,7 @@ updates:
     directory: "/" # Location of package.json
     schedule:
       interval: "weekly" # Options: daily, weekly, monthly
-    open-pull-requests-limit: 5
+    open-pull-requests-limit: 15
     # Automatically assign yourself to the PRs
     assignees:
       - "Yeshwanth-kr" 
